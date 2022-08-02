@@ -5,23 +5,22 @@ namespace aspnet_mvc_test_01.Controllers
     public class BookController : Controller
     {
         [Route("book")]
-        public string GetTests()
+        public IActionResult actionIndex()
         {
-            return "testss";
-            //return View();
+            return View("Views/Book/Index.cshtml");
         }
 
         [Route("book/view/{id?}")]
-        public string GetId(int? id)
+        public IActionResult actionView(int? id)
         {
-
-            if (id != null)
+            if (id == null)
             {
-                return $"id = {id}";
+                ViewData["data_id"] = "null";
             }
 
-            return "id = null";
-            //return View();
+            ViewData["data_id"] = id;
+
+            return View("Views/Book/View.cshtml");
         }
     }
 }

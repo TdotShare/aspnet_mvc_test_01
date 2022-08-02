@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Coding\dotnet\aspnet_mvc_test_01\aspnet_mvc_test_01\aspnet_mvc_test_01
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Coding/dotnet/aspnet_mvc_test_01/aspnet_mvc_test_01/aspnet_mvc_test_01/Views/Book/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/dotnet/aspnet_mvc_test_01/aspnet_mvc_test_01/aspnet_mvc_test_01/Views/Book/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Coding/dotnet/aspnet_mvc_test_01/aspnet_mvc_test_01/aspnet_mvc_test_01/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
