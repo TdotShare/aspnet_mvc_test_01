@@ -19,6 +19,7 @@
             <th scope="col">Name</th>
             <th scope="col">Create_at</th>
             <th scope="col">Update_at</th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -28,6 +29,7 @@
                 <td>@item.category_name</td>
                 <td>@item.category_create_at</td>
                 <td>@item.category_update_at</td>
+                <td><a href="category/delete/@item.category_id" ><button class="btn btn-danger">delete data</button></a></td>
             </tr>
         }
     </tbody>
