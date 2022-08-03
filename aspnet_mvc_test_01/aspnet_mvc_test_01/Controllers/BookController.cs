@@ -13,13 +13,7 @@ namespace aspnet_mvc_test_01.Controllers
         [Route("book/view/{id?}")]
         public IActionResult actionView(int? id)
         {
-            if (id == null)
-            {
-                ViewData["data_id"] = "null";
-            }
-
-            ViewData["data_id"] = id;
-
+            ViewData["data_id"] = id != null ? id : "null";
             return View("Views/Book/View.cshtml");
         }
     }

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<aspnet_mvc_test_01.Models.Category>
+
+@{
+    ViewData["Title"] = "Category Page";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>List Category Data.</p>
+
+<button class="btn btn-primary">create data</button>
+
+<div style="margin-bottom : 1%;"></div>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Create_at</th>
+            <th scope="col">Update_at</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <th scope="row">@item.category_id</th>
+                <td>@item.category_name</td>
+                <td>@item.category_create_at</td>
+                <td>@item.category_update_at</td>
+            </tr>
+        }
+    </tbody>
+</table>
