@@ -7,9 +7,18 @@
 
 <p>List Category Data.</p>
 
-<button class="btn btn-primary">create data</button>
+
+<a href="@Url.RouteUrl("category_create_page")"><button class="btn btn-primary">create data</button></a>
 
 <div style="margin-bottom : 1%;"></div>
+
+@if (TempData["alear"] != null)
+{
+    <div class="alert alert-@TempData["status"] alert-dismissible fade show" role="alert">
+        <strong>แจ้งเตือนจากระบบ !</strong> @TempData["msg"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
 
 
 <table class="table table-striped">
@@ -23,13 +32,17 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model) {
+        @foreach (var item in Model.Select((value, i) => new { i, value }))
+        {
+            var value = item.value;
+            var index = item.i + 1;
+
             <tr>
-                <th scope="row">@item.category_id</th>
-                <td>@item.category_name</td>
-                <td>@item.category_create_at</td>
-                <td>@item.category_update_at</td>
-                <td><a href="category/delete/@item.category_id" ><button class="btn btn-danger">delete data</button></a></td>
+                <th scope="row">@index</th>
+                <td>@value.category_name</td>
+                <td>@value.category_create_at</td>
+                <td>@value.category_update_at</td>
+                <td><a href="category/delete/@value.category_id"><button class="btn btn-danger">delete data</button></a></td>
             </tr>
         }
     </tbody>
