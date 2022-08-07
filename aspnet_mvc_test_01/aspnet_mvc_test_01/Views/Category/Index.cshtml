@@ -29,6 +29,7 @@
             <th scope="col">Create_at</th>
             <th scope="col">Update_at</th>
             <th scope="col"></th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -42,6 +43,7 @@
                 <td>@value.category_name</td>
                 <td>@value.category_create_at</td>
                 <td>@value.category_update_at</td>
+                <td><a href="@Url.RouteUrl("category_update_page" , new { id = @value.category_id })"><button class="btn btn-primary">update data</button></a></td>
                 <td><a href="category/delete/@value.category_id"><button class="btn btn-danger">delete data</button></a></td>
             </tr>
         }
