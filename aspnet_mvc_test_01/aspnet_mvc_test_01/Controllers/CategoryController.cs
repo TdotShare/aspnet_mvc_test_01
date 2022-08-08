@@ -95,6 +95,12 @@ namespace aspnet_mvc_test_01.Controllers
 
             }
 
+            if (category_data == null)
+            {
+                actionAlertData("failed update data", "warning");
+                return Redirect(HttpContext.Request.Headers["Referer"]);
+            }
+
             Dictionary<string, string> data = new Dictionary<string, string>();
 
             foreach (var key in Request.Form.Keys)
