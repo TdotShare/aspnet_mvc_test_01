@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Author Create Page";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["alear"] != null)
+{
+    <div class="alert alert-@TempData["status"] alert-dismissible fade show" role="alert">
+        <strong>แจ้งเตือนจากระบบ !</strong> @TempData["msg"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+
+<form action="@Url.RouteUrl("author_create_data")" method="post">
+
+    <div class="mb-3">
+        <label class="form-label">Full Name </label>
+        <input type="text" name="author_fullname" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Age</label>
+        <input type="number" name="author_age" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Gender</label>
+        <input type="text" name="author_gender" class="form-control" required>
+    </div>
+
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-success btn-block">create data</button>
+    </div>
+
+</form>

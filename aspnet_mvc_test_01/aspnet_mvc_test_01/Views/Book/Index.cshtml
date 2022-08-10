@@ -1,8 +1,41 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 *@
 
 <p> book Page </p>
 
+
 @{
+    var book_list = ViewData["book_list"] as IEnumerable<aspnet_mvc_test_01.Models.Join.BookJoin>;
 }
+
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Book Name</th>
+            <th scope="col">Author Full Name</th>
+            <th scope="col">Category Name</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in book_list.Select((value, i) => new { i, value }))
+        {
+            var value = item.value;
+            var index = item.i + 1;
+
+            <tr>
+                <th scope="row">@index</th>
+                <td>@value.book.book_name</td>
+                <td>@value.author.author_fullname</td>
+                <td>@value.category.category_name</td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>

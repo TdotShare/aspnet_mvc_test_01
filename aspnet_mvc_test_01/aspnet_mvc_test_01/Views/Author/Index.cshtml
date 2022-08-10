@@ -1,0 +1,49 @@
+﻿@model IEnumerable<aspnet_mvc_test_01.Models.Author>
+
+@{
+    ViewData["Title"] = "Author Page";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>List Author Data.</p>
+
+
+<a href="@Url.RouteUrl("author_create_page")"><button class="btn btn-primary">create data</button></a>
+
+<div style="margin-bottom : 1%;"></div>
+
+@if (TempData["alear"] != null)
+{
+    <div class="alert alert-@TempData["status"] alert-dismissible fade show" role="alert">
+        <strong>แจ้งเตือนจากระบบ !</strong> @TempData["msg"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Select((value, i) => new { i, value }))
+        {
+            var value = item.value;
+            var index = item.i + 1;
+
+            <tr>
+                <th scope="row">@index</th>
+                <td>@value.author_fullname</td>
+                <td>@value.author_age</td>
+                <td>@value.author_gender</td>
+                <td><a href="@Url.RouteUrl("author_delete_data" , new { id = @value.author_id })"><button class="btn btn-danger">delete data</button></a></td>
+            </tr>
+        }
+    </tbody>
+</table>

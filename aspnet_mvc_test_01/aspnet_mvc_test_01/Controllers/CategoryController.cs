@@ -7,9 +7,6 @@ namespace aspnet_mvc_test_01.Controllers
 {
     public class CategoryController : Controller
     {
-
-        private DbContext LibraryContext;
-
         [Route("category", Name = "category_index_page")]
         public IActionResult actionIndex()
         {
