@@ -11,6 +11,17 @@
 }
 
 
+@if (TempData["alear"] != null)
+{
+    <div class="alert alert-@TempData["status"] alert-dismissible fade show" role="alert">
+        <strong>แจ้งเตือนจากระบบ !</strong> @TempData["msg"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+
+<a href="@Url.RouteUrl("book_create_page")"><button class="btn btn-primary">create book</button> </a>
+
 
 
 <table class="table table-striped">
@@ -20,6 +31,8 @@
             <th scope="col">Book Name</th>
             <th scope="col">Author Full Name</th>
             <th scope="col">Category Name</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
             <th scope="col"></th>
         </tr>
     </thead>
@@ -34,7 +47,9 @@
                 <td>@value.book.book_name</td>
                 <td>@value.author.author_fullname</td>
                 <td>@value.category.category_name</td>
-                <td></td>
+                <td><a href="@Url.RouteUrl("book_update_page" , new { id = value.book.book_id })" ><button class="btn btn-primary">update data</button></a></td>
+                <td><a href="@Url.RouteUrl("filebook_index_page" , new { id = value.book.book_id})"> <button class="btn btn-primary">add file book</button></a></td>
+                <td><a href="@Url.RouteUrl("book_delete_data" , new { id = value.book.book_id })" onclick="return confirm('Are you sure you want to Remove?');" ><button class="btn btn-danger">delete data</button></a></td>
             </tr>
         }
     </tbody>

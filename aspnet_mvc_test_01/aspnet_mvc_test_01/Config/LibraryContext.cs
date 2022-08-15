@@ -10,6 +10,8 @@ namespace aspnet_mvc_test_01.Config
 
         public DbSet<Models.Book> Book { get; set; }
 
+        public DbSet<Models.Attachment> Attachment { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL("server=localhost;database=bookshop;user=root;password=''");
@@ -32,6 +34,11 @@ namespace aspnet_mvc_test_01.Config
             modelBuilder.Entity<Models.Book>(entity =>
             {
                 entity.HasKey(e => e.book_id);
+            });
+
+            modelBuilder.Entity<Models.Attachment>(entity =>
+            {
+                entity.HasKey(e => e.attachment_id);
             });
         }
     }

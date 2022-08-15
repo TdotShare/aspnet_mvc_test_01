@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Book File Page";
+    var book_data = ViewData["book_data"] as aspnet_mvc_test_01.Models.Book;
+    var attachment_list = ViewData["attachment_list"] as IEnumerable<aspnet_mvc_test_01.Models.Attachment>;
+}
+
+<h1>@ViewData["Title"] | @book_data.book_name</h1>
+
+
+
+@if (TempData["alear"] != null)
+{
+    <div class="alert alert-@TempData["status"] alert-dismissible fade show" role="alert">
+        <strong>แจ้งเตือนจากระบบ !</strong> @TempData["msg"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+
+<div class="card">
+    <div class="card-body">
+
+        <form action="@Url.RouteUrl("file_upload_data" , new { id = book_data.book_id })" method="post" enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <label class="form-label">Default file input example</label>
+                <input class="form-control" name="file_data" type="file" id="formFile" >
+            </div>
+
+            <button class="btn btn-success">add file</button>
+
+        </form>
+    </div>
+</div>
+
+<hr />
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name File</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in attachment_list.Select((value, i) => new { i, value }))
+        {
+            var value = item.value;
+            var index = item.i + 1;
+
+            <tr>
+                <th scope="row">@index</th>
+                <td><a href="~/uploads/@value.attachment_filename" target="_blank" >@value.attachment_filename</a></td>
+                 <td><a href="@Url.RouteUrl("file_delete_data" , new { id = value.attachment_id })" onclick="return confirm('Are you sure you want to Remove?');" ><button class="btn btn-danger">delete data</button></a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+

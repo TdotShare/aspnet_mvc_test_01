@@ -1,0 +1,91 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Book Update Page";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@{
+    var book_list = ViewData["book_list"] as aspnet_mvc_test_01.Models.Book;
+    var author_list = ViewData["author_list"] as IEnumerable<aspnet_mvc_test_01.Models.Author>;
+    var category_list = ViewData["category_list"] as IEnumerable<aspnet_mvc_test_01.Models.Category>;
+}
+
+
+<p> book create Page </p>
+
+@if (TempData["alear"] != null)
+{
+    <div class="alert alert-@TempData["status"] alert-dismissible fade show" role="alert">
+        <strong>แจ้งเตือนจากระบบ !</strong> @TempData["msg"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+
+<div class="card">
+    <div class="card-body">
+
+        <form action="@Url.RouteUrl("book_update_data" , new {id = book_list.book_id } )" method="post">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Name Book</label>
+                    <input type="text" class="form-control" value="@book_list.book_name" name="book_name" required>
+                </div>
+                <div class="col-sm-6">
+                    <label>Count Page</label>
+                    <input type="number" class="form-control" value="@book_list.book_num_page" name="book_num_page" required>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label>Select Author</label>
+                <select class="form-select" name="book_author_id" required>
+                    <option value="">Pls Select Author</option>
+                    @foreach (var item in author_list)
+                    {
+                        @if (item.author_id == book_list.book_author_id)
+                        {
+                            <option value="@item.author_id" selected>@item.author_fullname</option>
+                        }
+                        else
+                        {
+                            <option value="@item.author_id">@item.author_fullname</option>
+                        }
+
+                    }
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label>Select Category</label>
+                <select class="form-select" name="book_category_id" required>
+                    <option value="">Pls Select Category</option>
+                    @foreach (var item in category_list)
+                    {
+                        @if (item.category_id == book_list.book_category_id)
+                        {
+                            <option value="@item.category_id" selected >@item.category_name</option>
+                        }
+                        else
+                        {
+                             <option value="@item.category_id">@item.category_name</option>
+                        }
+                    }
+                </select>
+            </div>
+
+
+            <div style="padding-bottom : 1%"></div>
+
+            <button class="btn btn-block btn-success">update data</button>
+
+
+        </form>
+
+
+    </div>
+</div>
