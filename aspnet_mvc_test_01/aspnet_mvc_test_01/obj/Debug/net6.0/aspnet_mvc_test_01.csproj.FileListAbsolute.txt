@@ -69,3 +69,7 @@ D:\Coding\dotnet\aspnet_mvc_test_01\aspnet_mvc_test_01\aspnet_mvc_test_01\bin\De
 D:\Coding\dotnet\aspnet_mvc_test_01\aspnet_mvc_test_01\aspnet_mvc_test_01\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Coding\dotnet\aspnet_mvc_test_01\aspnet_mvc_test_01\aspnet_mvc_test_01\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\Coding\dotnet\aspnet_mvc_test_01\aspnet_mvc_test_01\aspnet_mvc_test_01\obj\Debug\net6.0\aspnet_mvc_test_01.csproj.CopyComplete
+D:\Coding\dotnet\aspnet_mvc_test_01\aspnet_mvc_test_01\aspnet_mvc_test_01\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Coding\dotnet\aspnet_mvc_test_01\aspnet_mvc_test_01\aspnet_mvc_test_01\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Coding\dotnet\aspnet_mvc_test_01\aspnet_mvc_test_01\aspnet_mvc_test_01\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Coding\dotnet\aspnet_mvc_test_01\aspnet_mvc_test_01\aspnet_mvc_test_01\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

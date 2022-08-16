@@ -9,24 +9,38 @@ namespace aspnet_mvc_test_01.Controllers
         [Route("book", Name = "book_index_page")]
         public IActionResult actionIndex()
         {
-            var db = new LibraryContext();
 
-            var book_list = (from book in db.Book
-                             join author in db.Author on book.book_author_id equals author.author_id
-                             join category in db.Category on book.book_category_id equals category.category_id
-                             select new aspnet_mvc_test_01.Models.Join.BookJoin
-                             {
-                                 book = book,
-                                 author = author,
-                                 category = category
-                             }).ToList();
+            try
+            {
+
+                var db = new LibraryContext();
+
+                var book_list = (from book in db.Book
+                                 join author in db.Author on book.book_author_id equals author.author_id
+                                 join category in db.Category on book.book_category_id equals category.category_id
+                                 select new aspnet_mvc_test_01.Models.Join.BookJoin
+                                 {
+                                     book = book,
+                                     author = author,
+                                     category = category
+                                 }).ToList();
 
 
-            ViewData["book_list"] = book_list;
+                ViewData["book_list"] = book_list;
+
+                return View("Views/Book/Index.cshtml");
+
+            }
+            catch (Exception e)
+            {
+                return Json(e.Message);
+
+            }
+
 
             //return Json(ViewData["book_list"]);
 
-            return View("Views/Book/Index.cshtml");
+
         }
 
         [HttpGet("book/create", Name = "book_create_page")]

@@ -26,7 +26,7 @@ namespace aspnet_mvc_test_01.Controllers
         }
 
         [HttpPost("file/upload_data/{id}", Name = "file_upload_data")]
-        public IActionResult actionUpload(int id)
+        public async Task<IActionResult> actionUpload(int id)
         {
 
 
@@ -59,7 +59,7 @@ namespace aspnet_mvc_test_01.Controllers
 
                 using (var fileStream = new FileStream(Path.Combine(path, file_data.FileName), FileMode.Create))
                 {
-                    file_data.CopyToAsync(fileStream);
+                    await file_data.CopyToAsync(fileStream);
                 }
 
                 var model = new Attachment
@@ -82,7 +82,7 @@ namespace aspnet_mvc_test_01.Controllers
             }
         }
 
-        [Route("file/delete/{id}" , Name = "file_delete_data")]
+        [Route("file/delete/{id}", Name = "file_delete_data")]
         public IActionResult actionDelete(int id)
         {
             var context = new LibraryContext();
@@ -91,7 +91,7 @@ namespace aspnet_mvc_test_01.Controllers
             if (attachment_data != null)
             {
 
-                var path = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"wwwroot\uploads\" + attachment_data.attachment_filename ));
+                var path = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"wwwroot\uploads\" + attachment_data.attachment_filename));
 
                 if (System.IO.File.Exists(path))
                 {

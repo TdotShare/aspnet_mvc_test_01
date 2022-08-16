@@ -1,7 +1,9 @@
-﻿namespace aspnet_mvc_test_01.Models
+﻿using System.ComponentModel.DataAnnotations;
+namespace aspnet_mvc_test_01.Models
 {
     public class Category
     {
+        [Key]
         public int category_id { get; set; }
         public string category_name { get; set; }
         public string category_create_at { get; set; }

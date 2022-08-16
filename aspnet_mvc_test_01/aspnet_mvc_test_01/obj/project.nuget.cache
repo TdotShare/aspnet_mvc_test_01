@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Bppa3GHou5NkJhKXB4/Ev7nBm+KWKCWuju54gHLtKS3cC/TkRgd2wrp80998+U6dC0F3ravRoIujwLv3UcSkWA==",
+  "dgSpecHash": "YG4KGrP3hpd6zo6LelB1g6LNjWvIcg9fe7GHAFqMax/ZgbLYyT6qIr99BxBLO8SpjGgSy59X/ieD/92FdyfvhQ==",
   "success": true,
   "projectFilePath": "D:\\Coding\\dotnet\\aspnet_mvc_test_01\\aspnet_mvc_test_01\\aspnet_mvc_test_01\\aspnet_mvc_test_01.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,9 @@
     "C:\\Users\\tdot\\.nuget\\packages\\k4os.compression.lz4.streams\\1.2.6\\k4os.compression.lz4.streams.1.2.6.nupkg.sha512",
     "C:\\Users\\tdot\\.nuget\\packages\\k4os.hash.xxhash\\1.0.6\\k4os.hash.xxhash.1.0.6.nupkg.sha512",
     "C:\\Users\\tdot\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\6.0.7\\microsoft.aspnetcore.diagnostics.entityframeworkcore.6.0.7.nupkg.sha512",
-    "C:\\Users\\tdot\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\tdot\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.8\\microsoft.aspnetcore.jsonpatch.6.0.8.nupkg.sha512",
+    "C:\\Users\\tdot\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.8\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.8.nupkg.sha512",
+    "C:\\Users\\tdot\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\tdot\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\tdot\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\tdot\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.7\\microsoft.entityframeworkcore.6.0.7.nupkg.sha512",
@@ -39,6 +41,8 @@
     "C:\\Users\\tdot\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\tdot\\.nuget\\packages\\mysql.data\\8.0.30\\mysql.data.8.0.30.nupkg.sha512",
     "C:\\Users\\tdot\\.nuget\\packages\\mysql.entityframeworkcore\\6.0.4\\mysql.entityframeworkcore.6.0.4.nupkg.sha512",
+    "C:\\Users\\tdot\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\tdot\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\tdot\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\tdot\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\tdot\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",

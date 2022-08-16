@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3Ynq7+KukPxhR5HlEOXgyrzDOku5shhT0AOS5Sturcg=",
+  "Hash": "BkHJHhARkYb5Wrm25tIsWU/b2sXDH6J4Wj3m1zd1ahs=",
   "Source": "aspnet_mvc_test_01",
   "BasePath": "_content/aspnet_mvc_test_01",
   "Mode": "Default",
@@ -1069,23 +1069,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Identity": "D:\\Coding\\dotnet\\aspnet_mvc_test_01\\aspnet_mvc_test_01\\aspnet_mvc_test_01\\wwwroot\\uploads\\c643526eb9d94a569d9e8ca01bfb67e1.png",
-      "SourceId": "aspnet_mvc_test_01",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Coding\\dotnet\\aspnet_mvc_test_01\\aspnet_mvc_test_01\\aspnet_mvc_test_01\\wwwroot\\",
-      "BasePath": "_content/aspnet_mvc_test_01",
-      "RelativePath": "uploads/c643526eb9d94a569d9e8ca01bfb67e1.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\c643526eb9d94a569d9e8ca01bfb67e1.png"
     }
   ]
 }

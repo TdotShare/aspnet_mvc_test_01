@@ -48,7 +48,7 @@ namespace aspnet_mvc_test_01.Controllers
             catch (Exception e)
             {
                 actionAlertData("failed create data", "warning");
-                return Redirect(HttpContext.Request.Headers["Referer"]);
+                return Json(e);
             }
 
         }
