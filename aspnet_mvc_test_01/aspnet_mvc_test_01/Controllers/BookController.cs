@@ -1,5 +1,6 @@
 ﻿using aspnet_mvc_test_01.Config;
 using aspnet_mvc_test_01.Models;
+using aspnet_mvc_test_01.Models.Join;
 using Microsoft.AspNetCore.Mvc;
 
 namespace aspnet_mvc_test_01.Controllers
@@ -18,7 +19,7 @@ namespace aspnet_mvc_test_01.Controllers
                 var book_list = (from book in db.Book
                                  join author in db.Author on book.book_author_id equals author.author_id
                                  join category in db.Category on book.book_category_id equals category.category_id
-                                 select new aspnet_mvc_test_01.Models.Join.BookJoin
+                                 select new BookJoin
                                  {
                                      book = book,
                                      author = author,
@@ -53,6 +54,8 @@ namespace aspnet_mvc_test_01.Controllers
 
             if (HttpContext.Request.Method == "GET")
             {
+                ViewData["author_list"] = db.Author.ToList();
+                ViewData["category_list"] = db.Category.ToList();
                 return View("Views/Book/Create.cshtml");
             }
 
